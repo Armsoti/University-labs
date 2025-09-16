@@ -1,0 +1,11 @@
+def average_of_elements (x, y):
+    total=0
+    count=0
+    for i in range (x, y + 1):
+        if i % 2 == 0:
+            total+=i
+            count+=1
+    if count == 0:
+        return 0
+    average = total/count
+    return average
