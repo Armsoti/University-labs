@@ -1,37 +1,40 @@
-# Присвойте змінній довільний рядок в та отримайте з неї наступні зрізи, якщо довжина слова достатня для виконання операції зрізу.
-# Другу і передостанню літери слова
-
 print("-" * 15 + "Завдання 1" + "-" * 15)
-print("Присвойте змінній довільний рядок в та отримайте з неї наступні зрізи, якщо довжина слова достатня для виконання операції зрізу.hДругу і передостанню літери слова")
+print("Присвойте змінній довільний рядок в та отримайте з неї наступні зрізи, якщо довжина слова достатня для виконання операції зрізу. Другу і передостанню літери слова")
 task1_string = input("Введіть рядок(мін 2 символа): ")
 length = len(task1_string)
 while length < 2:
-    b_string = input("Помилка! Занадто короткий рядок! Введіть рядок(мін 2 символа): ")
-    length = len(b_string)
+    task1_string = input("Помилка! Занадто короткий рядок! Введіть рядок(мін 2 символа): ")
+    length = len(task1_string)
 
-second_char = task1_string[1]
-second_to_last_char = task1_string[-2]
-result = second_char + second_to_last_char
-
+result = task1_string[0] + task1_string[2:-2] + task1_string[-1]
 print(f"Вихідний рядок:", task1_string)
-print(f"Друга літера:",second_char)
-print(f"Передостання літера:", second_to_last_char)
-print(f"Результат (зріз):", result)
+print("Нове слово", result)
 
 print("-" * 15 + "Завдання 2" + "-" * 15)
 print("Задане слово. Видалити з нього однакові символи, які розташовані поруч")
 task2_string = input("Введіть рядок(мін 2 символа): ")
 length2 = len(task2_string)
 while length2 < 2:
-    b_string = input("Помилка! Занадто короткий рядок! Введіть рядок(мін 2 символа): ")
-    length2 = len(b_string)
+    task2_string = input("Помилка! Занадто короткий рядок! Введіть рядок(мін 2 символа): ")
+    length2 = len(task2_string)
 new_word = task2_string[0]
-for i in range(1, len(task2_string)):
-    if task2_string[i] != task2_string[i - 1]:
+i = 1
+
+while i < length2:
+    if task2_string[i] != task2_string[i-1]:
         new_word += task2_string[i]
-print(f"Результат: {new_word}")
+    i += 1
+print("Нове слово:", new_word)
+
 
 print("-" * 15 + "Завдання 3" + "-" * 15)
+print("Задано речення. Скласти програму, яка визначає і виводить на екран всі його слова, попередньо перетворивши кожне слово за таким правилом: замінити літеру «b» на «c».")
+task3_string = str(input("Введіть рядок(мін 2 символа): "))
+length3 = len(task2_string)
+while length2 < 2:
+    task3_string = input("Помилка! Занадто короткий рядок! Введіть рядок(мін 2 символа): ")
+    length3 = len(task3_string)
 
+print("Після заміни літери b на c: ", task3_string.replace("b", "c") )
 
 
