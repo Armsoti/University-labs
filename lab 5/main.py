@@ -63,7 +63,7 @@ if a == "y":
     while a < 1:
         a = int(input("Please enter a valid number:"))
     for i in range(a):
-        key = input("Please enter students suename name and fathername:")
+        key = input("Please enter students surname name and father name:")
         mark = input("Please enter marks of student:")
         mark_list = [int(m.strip()) for m in mark.split(' ')]
         addStudent(StudentsMark, key, mark_list)
@@ -74,7 +74,7 @@ if dell == "y":
     while dell < 1:
         dell = int(input("Please enter a valid number:"))
     for i in range(dell):
-        key = input("Please enter students suename name and fathername:")
+        key = input("Please enter students surname name and father name:")
         delStudent(StudentsMark, key)
 
 sortStudents(StudentsMark)
