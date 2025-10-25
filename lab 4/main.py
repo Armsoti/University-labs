@@ -23,6 +23,15 @@ def add_elements_with_oddindex(list):
         i += 1
     return second_list
 
+def is_prime(n):
+    if n <= 1:
+        return False
+    # Перевіряємо дільники від 2 до квадратного кореня з n
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
 def task5_list():
     z = []
     x = []
@@ -32,20 +41,19 @@ def task5_list():
     while i <= 22:
         z.append(i)
         i += 1
-    print("Масив z", z)
+    print("Множина z", set(z))
 
     for i in range(len(z)):
         if z[i] > 0:
             x.append(z[i])
 
-    print("Масив x", x)
+    print("Множина x", set(x))
 
     for i in range(len(z)):
-        if z[i]%2 != 0:
-            if z[i]%3 != 0:
-                y.append(z[i])
+        if is_prime(z[i]):
+            y.append(z[i])
 
-    print("Масив y", y)
+    print("Множина y", set(y))
 
 print("-"*15, "Task 1", "-"*15)
 print("Реалізувати одновимірний масив, довжину масива та сам масив користувач має ввести з клавіатури. Виконати над масивом обчислення, вказані  у Вашому варіанті")

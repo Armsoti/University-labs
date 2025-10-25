@@ -6,9 +6,9 @@ while length < 2:
     task1_string = input("Помилка! Занадто короткий рядок! Введіть рядок(мін 2 символа): ")
     length = len(task1_string)
 
-result = task1_string[0] + task1_string[2:-2] + task1_string[-1]
+result = task1_string[1] + task1_string[-2]
 print(f"Вихідний рядок:", task1_string)
-print("Нове слово", result)
+print("Нове слово (друга + передостання):", result)
 
 print("-" * 15 + "Завдання 2" + "-" * 15)
 print("Задане слово. Видалити з нього однакові символи, які розташовані поруч")
