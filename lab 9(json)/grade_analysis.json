@@ -1,0 +1,10 @@
+{
+    "student_with_max_sum": {
+        "surname": "Ковальчук",
+        "sum_of_grades": 57
+    },
+    "student_with_min_sum": {
+        "surname": "Сидоренко",
+        "sum_of_grades": 29
+    }
+}
